@@ -1,4 +1,4 @@
-<%- include('partials/header.ejs')  %>
+<%- include('partials/header.ejs') %>
 
 <body>
     <%- include('partials/navbar.ejs') %>
@@ -6,20 +6,20 @@
         <hr>
         <h1>Perguntas</h1>
         <hr>
-        <a href="/perguntar" class="btn btn-primary w-25">Realizar Perguntas</a>
-        <% perguntas.forEach(pergunta => { %>
+        <a href="/perguntar" class="btn btn-primary w-25">Realizar Pergunta</a>
+        <hr>
+       <% perguntas.forEach(pergunta => { %>
             <div class="card mb-3">
                 <div class="card-body">
                     <h3><%= pergunta.titulo %></h3>
-                    <p class="text-body-tertiary"><%=moment(pergunta.createdAt).fromNow() %></p>
+                    <p class="text-body-tertiary"><%= moment(pergunta.createdAt).fromNow() %></p>
                     <p><%= pergunta.descricao %></p>
                 </div>
                 <div class="card-footer">
-                    <a href="/pergunta/<%= pergunta.id%>" class="btn btn-primary">Responder</a>
+                    <a href="/pergunta/<%= pergunta.id %>" class="btn btn-primary">Responder</a>
                 </div>
-            </div> 
+            </div>
         <% }) %>
-
     </div>
 </body>
 

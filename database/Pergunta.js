@@ -15,4 +15,5 @@ Pergunta.sync({force: false})
         console.log('Erro ao criar a tabela', error)
     })
 
-module.exports = Pergunta;
+
+    module.exports = Pergunta;
